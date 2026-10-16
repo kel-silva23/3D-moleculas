@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Moléculas 3D-IFPA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <header class="cabecalho">
+
+    <div class="logo">
+
+    <div class="logo-simbolo">
+        <span>✦</span>
+    </div>
+
+    <div class="logo-texto">
+        <h1>Amazônia <span>Molecular</span></h1>
+        <p>COMPOSTOS BIOATIVOS • VISUALIZAÇÃO 3D</p>
+    </div>
+
+</div>
+
+    <nav class="menu-superior">
+        <a href="#inicio">Início</a>
+        <a href="#plantas">Plantas</a>
+        <a href="#moleculas">Moléculas</a>
+        <a href="#sobre">Sobre o projeto</a>
+    </nav>
+
+</header>
+ 
+<section class="inicio" id="inicio">
+
+    <div class="inicio-conteudo">
+
+        <div class="inicio-texto">
+
+            <span class="inicio-tag">
+                🌿 CIÊNCIA • AMAZÔNIA • TECNOLOGIA
+            </span>
+
+            <h2>
+                Da planta à molécula,
+                <span>em três dimensões.</span>
+            </h2>
+
+            <p>
+                O <strong>Amazônia Molecular</strong> é uma ferramenta
+                digital desenvolvida para explorar, de forma visual e
+                interativa, compostos bioativos associados a plantas
+                medicinais do Pará.
+            </p>
+
+            <p>
+                Através da visualização tridimensional, o projeto busca
+                aproximar conceitos de Química e Biologia da realidade
+                amazônica, tornando a estrutura das moléculas mais
+                fácil de explorar e compreender.
+            </p>
+
+            <a href="#busca" class="botao-explorar">
+                Explorar plantas →
+            </a>
+
+        </div>
+
+
+        <div class="inicio-destaques">
+
+            <div class="destaque">
+                <span class="destaque-icone">🌿</span>
+
+                <div>
+                    <strong>Plantas medicinais</strong>
+                    <p>Conheça as espécies estudadas.</p>
+                </div>
+            </div>
+
+
+            <div class="destaque">
+                <span class="destaque-icone">🧬</span>
+
+                <div>
+                    <strong>Compostos bioativos</strong>
+                    <p>Explore moléculas associadas às plantas.</p>
+                </div>
+            </div>
+
+
+            <div class="destaque">
+                <span class="destaque-icone">🔬</span>
+
+                <div>
+                    <strong>Visualização 3D</strong>
+                    <p>Observe as estruturas em três dimensões.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="secao-plantas" id="plantas">
+
+    <div class="titulo-secao">
+
+        <span>🌿 BANCO DE PLANTAS</span>
+
+        <h2>Plantas medicinais estudadas</h2>
+
+        <p>
+            Conheça algumas das espécies presentes no banco de dados
+            do Amazônia Molecular e explore os compostos associados
+            a cada uma delas.
+        </p>
+
+    </div>
+
+    <div id="listaPlantas" class="lista-plantas">
+
+        <!-- As plantas serão inseridas aqui pelo JavaScript -->
+
+    </div>
+
+</section>
+
+ <section class="busca-planta" id="busca">
+
+  <h2>Pesquisar planta medicinal</h2>
+
+  <p>
+    Digite o nome popular da planta para visualizar suas informações
+    e seus compostos bioativos.
+  </p>
+
+  <div class="campo-busca">
+    <input 
+      type="text" 
+      id="inputPlanta" 
+      placeholder="Digite o nome da planta..."
+    >
+
+    <button onclick="buscarPlanta()">Buscar</button>
+  </div>
+
+</section>
+
+ <section class="informacoes-planta" id="plantas">
+<div class="dados-planta">
+
+    <h2 id="nomePlanta">🌿 Explore as plantas medicinais</h2>
+
+    <p id="Caracteristicas">
+        Pesquise uma planta pelo nome popular para visualizar
+        suas características, informações científicas e
+        compostos bioativos associados.
+    </p>
+
+</div>
+
+
+<div class="dados-molecula" id="moleculas">
+
+    <h3 id="nomeMolecula">🧬 Compostos bioativos</h3>
+
+<div id="botoesMoleculas"></div>
+
+<p id="descricaoMolecula">
+    Selecione um composto para conhecer algumas de suas
+    características e visualizar sua estrutura tridimensional.
+</p>
+
+</div>
+
+</section>
+
+ <div class="container">
+
+    <h2 class="titulo-visualizacao">
+        🧬 Visualização 3D da molécula
+    </h2>
+
+    <div class="area-molecula">
+
+        <div id="viewer"></div>
+
+        <div class="informacoes-molecula">
+
+            <h2 id="tituloMolecula">Selecione uma molécula</h2>
+
+            <div class="info-item">
+                <span>Fórmula molecular</span>
+                <strong id="formulaMolecula">—</strong>
+            </div>
+
+            <div class="info-item">
+                <span>Massa molecular</span>
+                <strong id="massaMolecula">—</strong>
+            </div>
+
+            <div class="info-item">
+                <span>CID (PubChem)</span>
+                <strong id="cidMolecula">—</strong>
+            </div>
+
+            <div class="info-item">
+                <span>Classe química</span>
+                <strong id="classeMolecula">—</strong>
+            </div>
+
+            <div class="aviso-molecula">
+                ℹ️ A estrutura apresentada é uma representação
+                tridimensional da molécula.
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SOBRE O PROJETO -->
+<section class="secao-sobre" id="sobre">
+
+    <div class="sobre-cabecalho">
+        <span class="sobre-etiqueta">CIÊNCIA • TECNOLOGIA • BIODIVERSIDADE</span>
+
+        <h2 class="titulo-projeto"> 
+         Desenvolvimento de um Visualizador 3D de Moléculas Bioativas
+        de Plantas Medicinais do Pará para Apoio ao Ensino de Química</h2>
+
+        <p class="sobre-nome-site">
+        Amazônia Molecular — aplicação web interativa
+    </p>
+    </div>
+
+    <div class="sobre-introducao">
+        <p>
+            O <strong>Amazônia Molecular</strong> é um projeto que reúne
+            informações sobre plantas medicinais e compostos químicos
+            associados a essas espécies, permitindo explorar representações
+            tridimensionais de estruturas moleculares.
+        </p>
+
+        <p>
+            A proposta é aproximar os conhecimentos sobre a biodiversidade
+            amazônica dos conteúdos científicos, utilizando a tecnologia
+            como ferramenta de pesquisa, aprendizagem e visualização.
+        </p>
+    </div>
+
+    <div class="sobre-grid">
+
+        <article class="sobre-card">
+            <span class="sobre-numero">01</span>
+            <h3>Objetivo do projeto</h3>
+
+            <p>
+                Organizar informações sobre plantas medicinais e possibilitar
+                a exploração visual de compostos químicos relacionados a elas,
+                tornando o estudo das moléculas mais interativo e acessível.
+            </p>
+        </article>
+
+        <article class="sobre-card">
+            <span class="sobre-numero">02</span>
+            <h3>Biologia</h3>
+
+            <p>
+                Contribui para a compreensão das espécies vegetais, suas
+                características e sua relação com a biodiversidade amazônica,
+                considerando também os conhecimentos tradicionais sobre plantas.
+            </p>
+        </article>
+
+        <article class="sobre-card">
+            <span class="sobre-numero">03</span>
+            <h3>Química</h3>
+
+            <p>
+                Permite explorar informações sobre compostos químicos,
+                fórmulas moleculares e representações tridimensionais,
+                aproximando conceitos químicos de recursos visuais.
+            </p>
+        </article>
+
+        <article class="sobre-card">
+            <span class="sobre-numero">04</span>
+            <h3>Informática</h3>
+
+            <p>
+                Utiliza tecnologias de desenvolvimento web para organizar
+                os dados, realizar buscas, apresentar informações e
+                possibilitar a visualização interativa das estruturas moleculares.
+            </p>
+        </article>
+
+    </div>
+
+    <div class="sobre-bloco">
+
+        <h3>Tecnologias utilizadas</h3>
+
+        <p>
+            O desenvolvimento integra diferentes ferramentas para construir
+            a interface, organizar as informações e apresentar as estruturas
+            moleculares em três dimensões.
+        </p>
+
+        <div class="sobre-tecnologias">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>3Dmol.js</span>
+            <span>PubChem</span>
+        </div>
+
+        <p class="sobre-detalhe">
+            HTML, CSS e JavaScript são utilizados no desenvolvimento da
+            aplicação. A biblioteca 3Dmol.js permite visualizar estruturas
+            moleculares em 3D, enquanto o PubChem fornece dados químicos
+            e estruturas de compostos identificados por seus CIDs.
+        </p>
+
+    </div>
+
+    <div class="sobre-bloco sobre-futuro">
+
+        <h3>Possibilidades futuras</h3>
+
+        <p>
+            O projeto poderá receber novas funcionalidades para ampliar
+            suas possibilidades de pesquisa e aprendizagem.
+        </p>
+
+        <div class="sobre-futuro-lista">
+
+            <div>
+                <strong>Banco de dados SQL</strong>
+                <p>
+                    Estruturar e armazenar informações sobre plantas,
+                    compostos químicos e suas relações.
+                </p>
+            </div>
+
+            <div>
+                <strong>Estruturas moleculares em 2D</strong>
+                <p>
+                    Implementar a possibilidade de exportar ou baixar
+                    representações bidimensionais das moléculas.
+                </p>
+            </div>
+
+            <div>
+                <strong>Modelos moleculares em 3D</strong>
+                <p>
+                    Explorar a criação de modelos físicos por impressão 3D,
+                    mediante a conversão das estruturas para formatos
+                    adequados à modelagem e à fabricação.
+                </p>
+            </div>
+
+        </div>
+
+        <span class="sobre-aviso">
+            As funcionalidades acima representam possibilidades futuras,
+            não recursos já implementados.
+        </span>
+
+    </div>
+
+   <div class="sobre-referencias-lista">
+<h3>Referências para pesquisa</h3>
+    <div class="sobre-referencia">
+        <a href="https://repositorio.museu-goeldi.br/"
+           target="_blank"
+           rel="noopener noreferrer">
+            OLIVEIRA, Paula Maria Correa de. Conhecimento e uso de plantas
+            medicinais no Assentamento Paulo Fonteles no distrito de
+            Mosqueiro, Belém, Pará: uma contribuição para a Política Nacional
+            de Plantas Medicinais e Fitoterápicos. UFRA/Museu Paraense
+            Emílio Goeldi, 2016.
+        </a>
+    </div>
+
+    <div class="sobre-referencia">
+        <a href="https://repositorio.museu-goeldi.br/items/7cfd32b4-da4a-43df-90a4-1688e673bc27"
+           target="_blank"
+           rel="noopener noreferrer">
+            SANTOS, Jéssica Juliane Furtado. Etnobotânica de plantas
+            medicinais em mercados públicos da Região Metropolitana de
+            Belém do Pará, Brasil.
+        </a>
+    </div>
+
+    <div class="sobre-referencia">
+        <a href="https://pubchem.ncbi.nlm.nih.gov/"
+           target="_blank"
+           rel="noopener noreferrer">
+            PUBCHEM. National Center for Biotechnology Information.
+            Chemical information database.
+        </a>
+    </div>
+
+    <div class="sobre-referencia">
+        <a href="https://3dmol.csb.pitt.edu/"
+           target="_blank"
+           rel="noopener noreferrer">
+            3Dmol.js. JavaScript library for molecular visualization.
+        </a>
+    </div>
+
+</div>
+
+</section>
+<!-- FIM: SOBRE O PROJETO -->
+
+  <!-- Biblioteca 3Dmol -->
+  <script src="https://3dmol.csb.pitt.edu/build/3Dmol-min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

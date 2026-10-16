@@ -1,0 +1,1615 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef4f7;
+    color: #17323d;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    width: 100%;
+    background: #123c49;
+    color: white;
+    padding: 32px 20px;
+    text-align: center;
+}
+
+.cabecalho-conteudo {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cabecalho h1 {
+    font-size: 38px;
+    margin: 0 0 8px 0;
+}
+
+.cabecalho p {
+    font-size: 17px;
+    margin: 0;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu-superior {
+    width: 100%;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 35px;
+    padding: 15px 20px;
+
+    border-bottom: 1px solid #d7e2e6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.menu-superior a {
+    color: #245b6b;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.menu-superior a:hover {
+    color: #168c8c;
+}
+
+
+/* =========================
+   ÁREA DE BUSCA
+========================= */
+
+.busca-planta {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    background: white;
+    padding: 30px;
+
+    border-radius: 14px;
+    border: 1px solid #d7e2e6;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    text-align: center;
+}
+
+.busca-planta h2 {
+    color: #174e5d;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.busca-planta p {
+    color: #61747b;
+    margin-bottom: 22px;
+}
+
+
+/* =========================
+   CAMPO DE BUSCA
+========================= */
+
+.campo-busca {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.campo-busca input {
+    width: 60%;
+    max-width: 550px;
+
+    padding: 13px 16px;
+
+    border: 1px solid #b8cbd1;
+    border-radius: 8px;
+
+    font-size: 15px;
+    outline: none;
+}
+
+.campo-busca input:focus {
+    border-color: #168c8c;
+}
+
+.campo-busca button {
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #168c8c;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.campo-busca button:hover {
+    background: #117171;
+}
+
+
+/* =========================
+   CARDS DA PLANTA
+========================= */
+
+.informacoes-planta {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.dados-planta,
+.dados-molecula {
+    width: 100%;
+    min-height: 230px;
+
+    background: white;
+
+    border: 1px solid #d7e2e6;
+    border-radius: 14px;
+
+    padding: 28px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* Títulos dos cards */
+
+.dados-planta::before {
+    content: "🌿  INFORMAÇÕES DA PLANTA";
+}
+
+.dados-molecula::before {
+    content: "🧪  COMPOSTOS BIOATIVOS";
+}
+
+.dados-planta::before,
+.dados-molecula::before {
+    display: block;
+
+    color: #174e5d;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    padding-bottom: 13px;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #dce7ea;
+}
+
+
+/* =========================
+   INFORMAÇÕES
+========================= */
+
+#nomePlanta {
+    color: #174e5d;
+    font-size: 27px;
+
+    margin-bottom: 12px;
+}
+
+#Caracteristicas {
+    color: #536970;
+    font-size: 15px;
+}
+
+#nomeMolecula {
+    color: #536970;
+    font-size: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   BOTÕES DAS MOLÉCULAS
+========================= */
+
+#botoesMoleculas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#botoesMoleculas button {
+    padding: 12px 20px;
+
+    background: #e7f4f3;
+    color: #176b6d;
+
+    border: 1px solid #9ccfcb;
+    border-radius: 9px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#botoesMoleculas button:hover {
+    background: #168c8c;
+    color: white;
+}
+
+
+/* =========================
+   VISUALIZADOR
+========================= */
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 14px;
+    border: 1px solid #d7e2e6;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+#viewer {
+    width: 100%;
+    height: 500px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: #f8fbfc;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 750px) {
+
+    .cabecalho h1 {
+        font-size: 30px;
+    }
+
+    .menu-superior {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .informacoes-planta {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-busca {
+        flex-direction: column;
+    }
+
+    .campo-busca input {
+        width: 100%;
+    }
+
+    .campo-busca button {
+        width: 100%;
+        max-width: 550px;
+    }
+}
+
+/* =========================
+   CORREÇÃO DO LAYOUT
+========================= */
+
+body {
+    overflow-x: hidden;
+}
+
+.cabecalho,
+.menu-superior,
+.busca-planta,
+.informacoes-planta,
+.container {
+    position: relative;
+    float: none;
+    clear: both;
+}
+
+.cabecalho {
+    height: auto;
+    min-height: 0;
+}
+
+.menu-superior {
+    height: auto;
+}
+
+.busca-planta {
+    height: auto;
+    min-height: 0;
+}
+
+.informacoes-planta {
+    height: auto;
+    min-height: 0;
+}
+
+.dados-planta,
+.dados-molecula {
+    position: relative;
+    float: none;
+    height: auto;
+}
+
+.container {
+    height: auto;
+    min-height: 0;
+}
+
+#viewer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    float: none;
+}
+
+/* =====================================
+   TEMA ESCURO - AMAZÔNIA MOLECULAR
+===================================== */
+
+body {
+    background: #061827;
+    color: #e8f4f6;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background: #082b3a;
+    color: white;
+}
+
+.cabecalho h1 {
+    color: white;
+}
+
+.cabecalho p {
+    color: #b9d8df;
+}
+
+
+/* MENU */
+
+.menu-superior {
+    background: #071f2c;
+    border-bottom: 1px solid #174b5c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.menu-superior a {
+    color: #a9dbe2;
+}
+
+.menu-superior a:hover {
+    color: #64d6c7;
+}
+
+
+/* BUSCA */
+
+.busca-planta {
+    background: #0a3041;
+    border: 1px solid #1b6376;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.busca-planta h2 {
+    color: #f0ffff;
+}
+
+.busca-planta p {
+    color: #a9cbd2;
+}
+
+
+/* CAMPO */
+
+.campo-busca input {
+    background: #102f42;
+    color: white;
+    border: 1px solid #35758a;
+}
+
+.campo-busca input::placeholder {
+    color: #8eafb7;
+}
+
+.campo-busca input:focus {
+    border-color: #52c9b7;
+    box-shadow: 0 0 0 3px rgba(82, 201, 183, 0.15);
+}
+
+.campo-busca button {
+    background: #48c6a8;
+    color: #062027;
+}
+
+.campo-busca button:hover {
+    background: #63d8bb;
+}
+
+
+/* CARDS */
+
+.dados-planta,
+.dados-molecula {
+    background: #0a3041;
+    border: 1px solid #1b6376;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.dados-planta::before,
+.dados-molecula::before {
+    color: #dff8f5;
+    border-bottom-color: #21566a;
+}
+
+
+/* INFORMAÇÕES */
+
+#nomePlanta {
+    color: #ffffff;
+}
+
+#Caracteristicas {
+    color: #b4d0d6;
+}
+
+#nomeMolecula {
+    color: #a9cbd2;
+}
+
+
+/* BOTÕES DAS MOLÉCULAS */
+
+#botoesMoleculas button {
+    background: #103b50;
+    color: #9be4da;
+    border: 1px solid #328b8b;
+}
+
+#botoesMoleculas button:hover {
+    background: #20a893;
+    color: white;
+    border-color: #20a893;
+}
+
+
+/* VISUALIZADOR */
+
+.container {
+    background: #0a3041;
+    border: 1px solid #1b6376;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+#viewer {
+    background: #03131f;
+}
+
+/* =====================================
+   VISUALIZAÇÃO DA MOLÉCULA
+===================================== */
+
+.titulo-visualizacao {
+    color: #e8f8f7;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+.area-molecula {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+}
+
+#viewer {
+    width: 100%;
+    height: 500px;
+    background: #03131f;
+    border: 1px solid #1b6376;
+    border-radius: 10px;
+}
+
+
+/* =====================================
+   INFORMAÇÕES DO COMPOSTO
+===================================== */
+
+.informacoes-molecula {
+    background: #082b3a;
+    border: 1px solid #1b6376;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.informacoes-molecula h2 {
+    color: #ffffff;
+    font-size: 23px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #21566a;
+}
+
+.info-item {
+    padding: 13px 0;
+    border-bottom: 1px solid #16495b;
+}
+
+.info-item span {
+    display: block;
+    color: #91c4cc;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.info-item strong {
+    color: #e5ffff;
+    font-size: 17px;
+}
+
+.aviso-molecula {
+    margin-top: 20px;
+    padding: 13px;
+
+    background: #103c4b;
+    border: 1px solid #23677a;
+    border-radius: 8px;
+
+    color: #b9dce1;
+    font-size: 13px;
+}
+
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media (max-width: 800px) {
+
+    .area-molecula {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==============================
+   NOVO CABEÇALHO
+   ============================== */
+
+.cabecalho {
+    width: 100%;
+    min-height: 75px;
+    padding: 0 5%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #061827;
+    border-bottom: 1px solid #174b5c;
+
+    position: relative;
+    float: none;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.logo h1 span {
+    color: #48c6a8;
+}
+
+/* MENU */
+
+.menu-superior {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    position: relative;
+    float: none;
+}
+
+.menu-superior a {
+    text-decoration: none;
+    color: #a9dbe2;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    padding: 28px 4px;
+
+    transition: 0.2s;
+}
+
+.menu-superior a:hover {
+    color: #64d6c7;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 750px) {
+
+    .cabecalho {
+        flex-direction: column;
+        gap: 10px;
+        padding: 18px 5%;
+    }
+
+    .menu-superior {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .menu-superior a {
+        padding: 5px;
+    }
+}
+
+/* =================================
+   LOGO - AMAZÔNIA MOLECULAR
+   ================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+/* Símbolo */
+
+.logo-simbolo {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #48c6a8;
+    border-radius: 13px;
+
+    background: linear-gradient(
+        145deg,
+        #0b3b4b,
+        #071f2c
+    );
+
+    box-shadow:
+        0 0 15px rgba(72, 198, 168, 0.18);
+
+    transform: rotate(45deg);
+
+    flex-shrink: 0;
+}
+
+.logo-simbolo span {
+    font-size: 27px;
+    color: #64d6c7;
+
+    transform: rotate(-45deg);
+
+    text-shadow:
+        0 0 10px rgba(100, 214, 199, 0.5);
+}
+
+/* Nome */
+
+.logo-texto {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    white-space: nowrap;
+}
+
+.logo-texto h1 {
+    margin: 0;
+
+    font-size: 26px;
+    line-height: 1.05;
+
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    color: #f5ffff;
+}
+
+.logo-texto h1 span {
+    color: #48c6a8;
+
+    text-shadow:
+        0 0 12px rgba(72, 198, 168, 0.25);
+}
+
+/* Subtítulo */
+
+.logo-texto p {
+    margin: 5px 0 0;
+
+    font-size: 8px;
+    line-height: 1;
+
+    letter-spacing: 1.8px;
+
+    color: #79aeb7;
+
+    font-weight: 600;
+}
+
+/* Efeito */
+
+.logo:hover .logo-simbolo {
+    border-color: #64d6c7;
+
+    box-shadow:
+        0 0 20px rgba(72, 198, 168, 0.35);
+
+    transition: 0.3s;
+}
+
+.logo:hover .logo-texto h1 span {
+    color: #64d6c7;
+
+    transition: 0.3s;
+}
+
+/* =================================
+   ESTADO INICIAL DOS CARDS
+   ================================= */
+
+.dados-planta,
+.dados-molecula {
+    min-height: 210px;
+    box-sizing: border-box;
+}
+
+#nomePlanta {
+    margin-bottom: 18px;
+}
+
+#Caracteristicas {
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+#nomeMolecula {
+    margin-bottom: 15px;
+}
+
+#textoInicialMolecula {
+    color: #8fb8c0;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+/* =================================
+   INÍCIO
+   ================================= */
+
+.inicio {
+    width: 100%;
+    padding: 70px 7% 60px;
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(42, 145, 130, 0.12),
+            transparent 35%
+        );
+
+    position: relative;
+}
+
+.inicio-conteudo {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+/* TEXTO */
+
+.inicio-tag {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #64d6c7;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.inicio-texto h2 {
+    margin: 0 0 25px;
+
+    max-width: 700px;
+
+    font-size: 48px;
+    line-height: 1.1;
+
+    color: #f4ffff;
+}
+
+.inicio-texto h2 span {
+    color: #48c6a8;
+}
+
+.inicio-texto p {
+    max-width: 700px;
+
+    margin: 0 0 15px;
+
+    color: #9fc4cc;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.inicio-texto strong {
+    color: #dffaf5;
+}
+
+/* BOTÃO */
+
+.botao-explorar {
+    display: inline-block;
+
+    margin-top: 15px;
+    padding: 13px 22px;
+
+    background: #48c6a8;
+    color: #062027;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.25s;
+}
+
+.botao-explorar:hover {
+    background: #64d6c7;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(72, 198, 168, 0.2);
+}
+
+/* DESTAQUES */
+
+.inicio-destaques {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.destaque {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 20px;
+
+    background: #0a3041;
+
+    border: 1px solid #1b6376;
+
+    border-radius: 12px;
+
+    transition: 0.25s;
+}
+
+.destaque:hover {
+    border-color: #48c6a8;
+
+    transform: translateX(4px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.destaque-icone {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #082b3a;
+
+    border: 1px solid #286d77;
+
+    border-radius: 10px;
+
+    font-size: 21px;
+
+    flex-shrink: 0;
+}
+
+.destaque strong {
+    color: #e8ffff;
+
+    font-size: 16px;
+}
+
+.destaque p {
+    margin: 5px 0 0;
+
+    color: #82adb6;
+
+    font-size: 13px;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 850px) {
+
+    .inicio {
+        padding: 50px 5%;
+    }
+
+    .inicio-conteudo {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .inicio-texto h2 {
+        font-size: 38px;
+    }
+
+}
+
+/* =================================
+   SEÇÃO PLANTAS
+   ================================= */
+
+.secao-plantas {
+    width: 100%;
+    padding: 70px 7%;
+    box-sizing: border-box;
+    background: #071f2c;
+    border-top: 1px solid #123f4e;
+}
+
+.titulo-secao {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.titulo-secao > span {
+    color: #64d6c7;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    margin: 12px 0;
+
+    color: #f2ffff;
+
+    font-size: 32px;
+}
+
+.titulo-secao p {
+    margin: 0;
+
+    color: #8fb8c0;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* LISTA */
+
+.lista-plantas {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* CARD */
+
+.card-planta {
+    padding: 23px;
+
+    background: #0a3041;
+
+    border: 1px solid #1b6376;
+    border-radius: 13px;
+
+    transition: 0.25s;
+}
+
+.card-planta:hover {
+    transform: translateY(-4px);
+
+    border-color: #48c6a8;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.card-planta .icone-planta {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 16px;
+
+    background: #082b3a;
+
+    border: 1px solid #286d77;
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+.card-planta h3 {
+    margin: 0 0 6px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+}
+
+.card-planta .nome-cientifico {
+    margin: 0 0 12px;
+
+    color: #64d6c7;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+.card-planta .descricao-planta {
+    margin: 0;
+
+    color: #91b8c0;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* BOTÃO */
+
+.botao-planta {
+    display: inline-block;
+
+    margin-top: 17px;
+    padding: 8px 13px;
+
+    background: transparent;
+
+    border: 1px solid #328b8b;
+    border-radius: 7px;
+
+    color: #8de1d6;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao-planta:hover {
+    background: #20a893;
+    border-color: #20a893;
+
+    color: #ffffff;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .lista-plantas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .lista-plantas {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Plantas escondidas inicialmente */
+
+.planta-escondida {
+    display: none;
+}
+.planta-escondida.mostrar-planta {
+    display: block;
+}
+
+
+/* Botão Ver mais */
+
+.botao-ver-mais {
+    display: block;
+    margin: 35px auto 0;
+    padding: 11px 22px;
+
+    background: transparent;
+    border: 1px solid #328b8b;
+    border-radius: 8px;
+
+    color: #8de1d6;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: .25s;
+}
+
+.botao-ver-mais:hover {
+    background: #20a893;
+    border-color: #20a893;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   SOBRE O PROJETO — AMAZÔNIA MOLECULAR
+========================================= */
+
+.secao-sobre {
+    width: 100%;
+    padding: 80px 7%;
+    background: #061827;
+    color: #eaf7fa;
+    box-sizing: border-box;
+}
+
+/* CABEÇALHO */
+
+.sobre-cabecalho {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.sobre-etiqueta {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #1b6376;
+    border-radius: 30px;
+    background: rgba(72, 198, 168, 0.08);
+    color: #64d6c7;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.sobre-cabecalho h2 {
+    margin: 0 0 18px;
+    color: #eaf7fa;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.sobre-cabecalho h2 span {
+    color: #48c6a8;
+}
+
+.sobre-cabecalho > p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #a9c5d0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* INTRODUÇÃO */
+
+.sobre-introducao {
+    max-width: 950px;
+    margin: 0 auto 45px;
+    padding: 25px 30px;
+    border-left: 3px solid #48c6a8;
+    border-radius: 0 12px 12px 0;
+    background: #082b3a;
+}
+
+.sobre-introducao p {
+    margin: 0 0 14px;
+    color: #c5dce3;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+.sobre-introducao p:last-child {
+    margin-bottom: 0;
+}
+
+.sobre-introducao strong {
+    color: #64d6c7;
+}
+
+/* CARTÕES: OBJETIVO, BIOLOGIA, QUÍMICA E INFORMÁTICA */
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto 45px;
+}
+
+.sobre-card {
+    position: relative;
+    padding: 28px;
+    overflow: hidden;
+    border: 1px solid #1b6376;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #0a3041, #082331);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.sobre-card:hover {
+    transform: translateY(-5px);
+    border-color: #48c6a8;
+}
+
+.sobre-numero {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #48c6a8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.sobre-card h3 {
+    margin: 0 0 14px;
+    color: #eaf7fa;
+    font-size: 1.25rem;
+}
+
+.sobre-card p {
+    margin: 0;
+    color: #a9c5d0;
+    font-size: 0.96rem;
+    line-height: 1.8;
+}
+
+/* BLOCOS DE CONTEÚDO */
+
+.sobre-bloco {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 32px;
+    border: 1px solid #174b5c;
+    border-radius: 16px;
+    background: #082331;
+}
+
+.sobre-bloco h3 {
+    margin: 0 0 16px;
+    color: #64d6c7;
+    font-size: 1.45rem;
+}
+
+.sobre-bloco > p {
+    margin: 0 0 22px;
+    color: #a9c5d0;
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+/* TECNOLOGIAS */
+
+.sobre-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.sobre-tecnologias span {
+    padding: 10px 17px;
+    border: 1px solid #247b83;
+    border-radius: 8px;
+    background: rgba(72, 198, 168, 0.09);
+    color: #64d6c7;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.sobre-tecnologias span:hover {
+    transform: translateY(-3px);
+    background: rgba(72, 198, 168, 0.17);
+}
+
+.sobre-bloco .sobre-detalhe {
+    margin-bottom: 0;
+    font-size: 0.92rem;
+}
+
+/* POSSIBILIDADES FUTURAS */
+
+.sobre-futuro-lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.sobre-futuro-lista > div {
+    padding: 20px;
+    border: 1px solid #174b5c;
+    border-radius: 12px;
+    background: #061d2b;
+}
+
+.sobre-futuro-lista strong {
+    display: block;
+    margin-bottom: 12px;
+    color: #64d6c7;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.sobre-futuro-lista p {
+    margin: 0;
+    color: #a9c5d0;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.sobre-aviso {
+    display: block;
+    margin-top: 22px;
+    padding: 14px 18px;
+    border-left: 3px solid #48c6a8;
+    border-radius: 0 8px 8px 0;
+    background: rgba(72, 198, 168, 0.07);
+    color: #b8d8df;
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+/* AJUSTE VISUAL DAS REFERÊNCIAS */
+
+.sobre-referencias-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 25px 0 28px;
+}
+
+.sobre-referencia {
+    padding: 18px 22px;
+    border: 1px solid #174b5c;
+    border-radius: 10px;
+    background: #061d2b;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.sobre-referencia:hover {
+    border-color: #48c6a8;
+    transform: translateY(-2px);
+}
+
+.sobre-referencia a {
+    display: block;
+    color: #b9dce5;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+.sobre-referencia a:hover {
+    color: #64d6c7;
+    text-decoration: underline;
+}
+
+/* TÍTULO OFICIAL DO PROJETO */
+
+.sobre-cabecalho h2.titulo-projeto {
+    max-width: 950px;
+    margin: 25px auto 20px;
+    font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+    line-height: 1.4;
+    text-wrap: balance;
+}
+
+/* NOME DA APLICAÇÃO */
+
+.sobre-cabecalho .sobre-nome-site {
+    margin-top: 15px;
+    color: #64d6c7;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+/* RESPONSIVIDADE — TABLETS */
+
+@media (max-width: 850px) {
+
+    .secao-sobre {
+        padding: 65px 5%;
+    }
+
+    .sobre-grid {
+        gap: 16px;
+    }
+
+    .sobre-card {
+        padding: 23px;
+    }
+
+    .sobre-bloco {
+        padding: 26px;
+    }
+
+    .sobre-futuro-lista {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* RESPONSIVIDADE — CELULARES */
+
+@media (max-width: 600px) {
+
+    .secao-sobre {
+        padding: 50px 5%;
+    }
+
+    .sobre-cabecalho {
+        margin-bottom: 30px;
+    }
+
+    .sobre-etiqueta {
+        font-size: 0.67rem;
+        letter-spacing: 1px;
+    }
+
+    .sobre-cabecalho > p {
+        font-size: 0.95rem;
+    }
+
+    .sobre-introducao {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .sobre-grid {
+        grid-template-columns: 1fr;
+        margin-bottom: 30px;
+    }
+
+    .sobre-card {
+        padding: 23px;
+    }
+
+    .sobre-bloco {
+        padding: 22px 18px;
+        margin-bottom: 22px;
+    }
+
+    .sobre-bloco h3 {
+        font-size: 1.25rem;
+    }
+
+    .sobre-tecnologias {
+        gap: 9px;
+    }
+
+    .sobre-tecnologias span {
+        padding: 9px 12px;
+        font-size: 0.82rem;
+    }
+
+    .sobre-futuro-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-referencias ul {
+        padding-left: 20px;
+    }
+}
